@@ -1,0 +1,30 @@
+{% extends 'main_school/main_menu.html' %}
+
+{%block title%}Teacher{% endblock %}
+
+
+{% block content%}
+    
+    <h1>Teacher</h1>
+
+    {% for el in data_teacher %}
+
+    <div class="conteiner_teacher">
+        <!-- {% url 'NewsDeteilView' el.id %} -->
+        <a href="{% url 'data_teacher' el.slug %}">
+            <img src="{{ el.picture.url }}" alt="product" class="teacher_image">
+        </a>
+
+        <p>{{ el.name }}</p>
+        <p>{{ el.surname }}</p>
+        <p>{{ el.teacher_subject }}</p>
+
+    </div>
+
+    
+    {% endfor %}
+
+    
+
+
+{% endblock %}

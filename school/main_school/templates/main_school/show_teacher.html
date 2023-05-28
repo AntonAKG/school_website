@@ -1,0 +1,20 @@
+{% extends 'main_school/main_menu.html' %}
+
+{%block title%}Teacher{% endblock %}
+
+
+{% block content%}
+
+    <div class="greeating_teaher">
+        <h1 style="color:navajowhite;">{{data_teacher.surname}} {{data_teacher.name}}</h1>
+        <p class="teacher_subject">{{data_teacher.teacher_subject}}</p>
+        <a href="#">
+            <img src="{{ data_teacher.picture.url }}" alt="teacher" class="slug_teacher_image">
+        </a>
+    </div>
+    
+    <div class="teacher_description">
+        <p class="biography">{{data_teacher.biography}}</p>
+    </div>
+
+{% endblock %}

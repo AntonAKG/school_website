@@ -1,0 +1,23 @@
+{% extends 'main_school/main_menu.html' %}
+{%block title%}Teacher{% endblock %}
+
+
+{% block content%}
+    <div>
+        <h1>Розклад дзвінків</h1>
+
+        {% for el in call %}
+            <div class="call-conteiner">
+
+                <a href="#">
+                    <img src="{{ el.call_picture.url }}" alt="product" class="call_schedule">
+                </a>
+                
+            </div>                
+
+
+        {% endfor %}
+
+    </div>
+
+{% endblock %}

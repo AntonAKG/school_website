@@ -1,0 +1,29 @@
+{% extends 'main_school/main_menu.html' %}
+
+{%block title%}Teacher{% endblock %}
+
+
+{% block content%}
+
+    <h1 class="timetable_header">Розклад уроків</h1>
+
+    <div>
+        <label for="start">Start date:</label>
+        
+        <input type="date" id="start" name="trip-start">
+        {% for el in timetable %}
+            <div class="timetable_conteiner">
+
+                <a href="#">
+                    <img src="{{ el.lesson_picture.url }}" alt="product" class="timetable">
+                </a>
+                
+            </div>                
+
+
+        {% endfor %}
+
+    </div>
+
+
+{% endblock %}
